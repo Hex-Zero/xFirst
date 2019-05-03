@@ -1,0 +1,153 @@
+* {
+    margin: 0px 0px ;
+    text-align: center;
+}
+a {
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color: gold;
+}
+html{
+    background-color: rgb(252, 247, 240);
+}
+#main {
+    background-color:rgb(247, 226, 110);
+    display: flex;
+  width: 870px;
+    margin: 0px auto;  
+}
+#leftdiv{  
+    min-width: 120px;
+    height: 840px;
+    background-image: linear-gradient(90deg,gold, white,white, gold, gold,white, white ,white, white ,white, white ,white,gold );
+ }
+ #rigthdiv{
+     min-width: 120px;
+     height: 840px;
+      background-image: linear-gradient(90deg,gold, white,white, gold, gold,white, white ,white, white ,white, white ,white,gold );
+  }
+
+#middiv{
+    background-image: linear-gradient(55deg,blue,green ,red);
+    border-radius: 15px;
+    display: flex;
+    width: 624px;
+    height: 624px;
+    border: 3px black solid;
+    flex-wrap: wrap;
+}
+.img{
+    opacity: 0.48;
+    width: 150px;
+    height: 150px;
+    background-image: url(water+wolf+small.jpg);
+    border-radius: 100%;
+    border:  3px black solid;
+    margin: 0px 0px;
+}
+header {
+    margin: 0 auto;
+    background-image: linear-gradient(90deg,white,gold,white,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,white,gold,white);
+    width: 870px;
+    height: 870px; 
+}
+.menu {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: rgba(248, 236, 221, 0.822);
+}
+.nav-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: rgba(248, 236, 221, 0.822);
+    visibility: none;
+}
+.postText{
+    margin-top: 100px;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    color:black;
+}
+.wordcount{
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    color:black;
+}
+.characters{
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
+    color:black;
+}
+.red {
+    color: red;
+}
+.footer{
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: rgba(248, 236, 221, 0.822);
+    z-index: 3;
+    bottom: -658px;
+    position: fixed;
+    background-image: linear-gradient(90deg,white,gold,white,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,white,gold,white);
+    width: 870px;
+    height: 870px; 
+}
+#mousem {
+    opacity: 0.50;
+   font-weight: 900;
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+}
+#practicelink{
+    position: fixed;
+    top: 3px;
+    left: 0px;
+}
+#topfadein {
+    z-index: 4;
+    visibility: none;
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: rgba(248, 236, 221, 0.822);
+}
+#Hex {
+    border-color: gold;
+    border-style: solid;
+    background-color: gold;
+    color: rgba(248, 236, 221, 0.822);
+}
+#Zero{
+    border-color: gold;
+    border-style: solid;
+   background-color:  rgba(248, 236, 221, 0.822);
+    color: gold;
+}
+@media screen and (max-width: 714px){
+    #main {  
+        display: flex;
+        width: 630px;
+    }
+    header{
+        height: 100px;
+        width: 630px;
+        margin: 0px auto;
+    }
+    footer{
+        background-image: linear-gradient(90deg,white,gold,white,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,gold,white,gold,white);
+        width: 630px;
+        height: 200px;
+        margin: 0px auto;
+    }
+    #leftdiv{display: none;
+    }
+    #rigthdiv{display: none;}
+    #middiv{order: 1;}
+}

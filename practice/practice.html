@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html id="html" lang="en" onmousemove="showCoords(event)" onclick="clicki(event)" onmousedown="mousekey(event)" onkeypress="clickkey(event)">
+<head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="main.css">
+ <!--^^^ Implementing Cascading Style Sheets ^^^-->
+    <script src="handlebars-v4.1.1.js"></script>
+    <script id="greet" type="text/x-handlebars-template">
+  {{greeting}}
+</script>
+<!--^^^ Handlebar setup above ^^^-->
+</head>
+<body id="body" onload="changeImage('Angel_TTT2'),changeImage('Angel_TTT21');">
+  
+    <a id="positionlink" href="../main.html">Position</a>
+      <style>#positionlink{position: fixed;top: 0px;left: 0px;}</style> 
+    <header>     
+        <img id='Angel_TTT2' src="https://vignette.wikia.nocookie.net/tekken/images/3/38/Angel_TTT2.png/revision/latest?cb=20170625205933&path-prefix=en" 
+        alt="" >
+        <h1 id="practiceSign">Practise Page</h1>
+        <img id='Angel_TTT21' src="https://vignette.wikia.nocookie.net/tekken/images/3/38/Angel_TTT2.png/revision/latest?cb=20170625205933&path-prefix=en" 
+        alt="" >
+    </header>
+  <textarea name="jsarea" id="jsarea" cols="75" rows="6"></textarea>
+   
+  <div></div>
+  <h3 id="h3s" onmouseover="changeColor();" onmouseout="changeAgain();">Look at me!</h3>
+   <label for="firstp" class="nickName" id="first">Sw33t</label> 
+    <label for="secondp" class="nickName" id="second">HexZero</label>
+    <label for="thirdp" class="nickName" id="third">GGO</label>
+
+    <form action="" name="formex">
+            <input type="checkbox" name="firstp" id="firstp" onclick="showP();" >
+            <input type="checkbox" name="secondp" id="secondp" onclick="showP();">
+            <input type="checkbox" name="thirdp" id="thirdp" onclick="showP();"><label for="" onclick="uncheck()">Nick name</label> <br>
+            <input type="checkbox" name="hideI" id="hideI" onclick="hideImg();">Hide Pictures<br>
+            <input type="checkbox" name="CColor" id="CColor" onclick="cColor('black');">Change Theme Black/White<br>
+            <input type="checkbox" name="CColor1" id="CColor1" onmousedown="cColor('red');">Change Theme Red/White<br>
+            <input id="textf" type="text" name="mousex">Mouse X Position <br>
+            <input id="textf1" type="text" name="mousey">Mouse Y Position <br>
+            <input id="textf2" type="text" name="onclick">You Clicked at. <br>
+            <input id="textf3" type="text" name="mousekey">Mouse Button<br>
+            <input id="textf4" type="text" name="keypress">Key Pressed<br>
+    </form>
+   
+        <div class="blinker"> \/\/\/\/\/\/\/\/\/\/\/\/\/</div>
+      </div> 
+            
+            <div id="hello">
+            </div>
+            <div class="blinker"> /\/\/\/\/\/\/\/\/\/\/\/\/\</div>
+          </div> 
+   
+    
+    
+</body>
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script> 
+<script src="new.js"></script>
+
+</script>              
+<style>
+        .mousemi {
+                text-align: center;
+                z-index: 100;
+                opacity: 0.50;
+                font-weight: 900;
+                position: fixed;
+                bottom: 100px;
+                left: 0;
+            }
+        .buttonhide {
+            background-image: linear-gradient(45deg,white,red,white);
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            z-index: 100;  
+                font-weight: 900;
+                position: fixed;
+                bottom: 91px;
+                left: 0;
+        } 
+            #mousemx{
+            background-image: linear-gradient(45deg,blue,green,blue);
+                opacity: 0.33;
+            }
+            #mousemi{
+                bottom: 76px;
+            }
+        </style>  
+   <input class="mousemi" id="mousem" name="mousem" type="text">
+   <input class="mousemi" id="mousemi" name="mousemi" type="text">
+   <input class="buttonhide" id="mousemx" name="mousemx" type="button">
+   <input class="buttonhide" id="mousemb" name="mousemb" type="button">  
+<script>
+        let x = 0;
+        let y = 0;
+       document.onmousedown = () => addCoords(event);
+       document.onmousemove = () => showCoords(event);
+        function showCoords(event){
+            let a = event.clientX;
+            let b = event.clientY;
+            document.getElementById("mousem").value = "X:"+a +" Y:"+ b;
+        }
+       function addCoords(event){
+        if(x === 0 && y === 0){
+            x = event.clientX;
+            y = event.clientY;
+            document.getElementById("mousemi").style.opacity = 0.5;
+            document.getElementById("mousemi").style.backgroundColor = "green";
+            return x,y } 
+        else{
+            document.getElementById("mousemi").style.opacity = 0.99;
+            document.getElementById("mousemi").style.backgroundColor = "";
+            document.getElementById("mousemi").value = "X:"+Math.abs(x -=event.clientX) +" Y:"+Math.abs(y -=event.clientY);
+           return x=0,y=0;
+        }
+    }
+    $(document).ready(()=>{
+    $('#mousemb').on('click',()=>{
+        $('#mousem').slideUp(250); 
+        $('#mousemi').fadeOut(250); 
+        $('#mousemb').fadeOut(250);
+    })
+    $('#mousemx').on('click',()=>{
+        $('#mousem').slideDown(250); 
+        $('#mousemi').fadeIn(250); 
+        $('#mousemb').fadeIn(250); 
+    })});
+    </script>
+</html>

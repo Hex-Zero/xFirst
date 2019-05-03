@@ -1,0 +1,60 @@
+h1 {
+    font-style: italic;
+    text-align: center;
+}
+body {
+    display: grid;
+    justify-content: center;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+header :hover {
+    background-color: rgba(246, 252, 157, 0.568);
+    
+}
+
+.nickName {
+    visibility: hidden;
+}
+
+#Angel_TTT2,#Angel_TTT21{
+    visibility: visible;
+}
+html {
+    background-color: rgba(203, 252, 252, 0.418);
+   
+}
+.textf {
+    background-color: rgb(255, 255, 255);
+}
+#first {
+    color: rgb(248, 203, 4);
+}
+#second {
+    color: rgb(177, 185, 192);
+}#third {
+    color: rgb(177, 2, 2);
+}
+
+.blinker {
+    animation: 2s blink step-end infinite;
+    color: #2E3D48;
+    font-size: 20px;  
+    font-weight: 100;
+    margin-left: -1%;
+  }
+
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: green;
+    }
+  }
+
+  #jsarea {
+      display: none;
+  }
